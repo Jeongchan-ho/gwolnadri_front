@@ -35,7 +35,7 @@ window.onload = async function SelectTicket(search) {
             div.setAttribute('class','sub-card')
 
             const event_img = document.createElement('img')
-            event_img.setAttribute('src',`${events.image}`)
+            event_img.setAttribute('src',`${backend_base_url}${events.image}`)
             // event_img.setAttribute('src',"/assets/img/image-2.jpg")
 
             // 기간한정 스티커 ----
@@ -44,10 +44,11 @@ window.onload = async function SelectTicket(search) {
 
             const currentDate = new Date();
             currentDate.setHours(0, 0, 0, 0);
-            eventStart.setHours(0, 0, 0, 0);
-            eventEnd.setHours(0, 0, 0, 0);
+
             const eventStart = new Date(get_event_start_date); 
             const eventEnd = new Date(get_event_end_date); 
+            eventStart.setHours(0, 0, 0, 0);
+            eventEnd.setHours(0, 0, 0, 0);
             const oneDay = 24 * 60 * 60 * 1000;
             const diffDaysStart = Math.round(Math.abs((currentDate - eventStart) / oneDay));
             const diffDaysEnd = Math.round(Math.abs((currentDate - eventEnd) / oneDay));            

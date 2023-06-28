@@ -29,11 +29,9 @@ window.onload = async function EventList() {
     const get_likes = element.likes
     const get_like_count = element.likes_count;
     const get_bookmarker = element.event_bookmarks;
-    const get_image = element.image.slice("http://127.0.0.1:8000".length);
-    // console.log(get_title, get_event_start_date, get_event_end_date, get_like_count, get_bookmarker);
+    const get_image = element.image
     const eventCard = document.createElement('div');
     eventCard.classList.add('sub-card');
-    console.log(get_image)
     const eventImage = document.createElement('img');
     eventImage.src = `${backend_base_url}${get_image}`;
     eventImage.alt = '';
@@ -48,7 +46,6 @@ window.onload = async function EventList() {
     const oneDay = 24 * 60 * 60 * 1000;
     const diffDaysStart = Math.round(Math.abs((currentDate - eventStart) / oneDay));
     const diffDaysEnd = Math.round(Math.abs((currentDate - eventEnd) / oneDay));
-    console.log(currentDate,eventStart ,diffDaysStart)
     const reservationTag = document.createElement('p');
     reservationTag.classList.add('reservation');
     if (currentDate >= eventStart && currentDate <= (eventEnd - 7 * oneDay)) {
@@ -147,7 +144,6 @@ window.onload = async function EventList() {
       const event_id = parseInt(element.id, 10);
       const token = localStorage.getItem("access");
 
-      // console.log(event_id);
       if (payload) {
         try {
           const bookmarkResponse = await fetch(`${backend_base_url}/events/${event_id}/bookmark/`, {
