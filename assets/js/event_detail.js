@@ -45,6 +45,8 @@ async function EventDetail() {
 
   eventImgElement.className = 'event_img';
   eventImgElement.src = backend_image_url;
+  const eventImg = eventImgElement
+  eventImg.style.filter = 'brightness(0.6)';
   eventImgElement.alt = '';
 
   categoryElement.className = 'category';
@@ -126,7 +128,8 @@ async function EventDetail() {
 
   subContentTxtElement.id = 'event_content';
   subContentTxtElement.className = 'content-txt';
-  subContentTxtElement.textContent = response_json.content;
+  subContentTxtElement.innerHTML = convertNewlinesToBreaks(response_json.content);
+  // subContentTxtElement.textContent = response_json.content;
 
 
   subContentElement.appendChild(subContentTitleElement);
@@ -376,6 +379,11 @@ function readURL(input) {
   } else {
     document.querySelector("#com_image").src = "";
   }
+}
+
+function convertNewlinesToBreaks(text) {
+  // \n/g는 정규 표현식(regular expression)
+  return text.replace(/\n/g, '<br>');
 }
 
 async function bookingbtn(event_id) {
