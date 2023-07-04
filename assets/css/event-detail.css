@@ -11,7 +11,7 @@
 .sub-card-txt .event-date { font-size: 1.7rem; font-weight: 300; margin: 0 2px 25px 5px; } 
 .sub-card-txt .event-money { font-size: 1.7rem; font-weight: 300; margin: 0 2px 5px 5px; }
 .sub-card-txt .card-icon { display: flex; gap: 30px; margin: 0 0 0 5px; } 
-.sub-card-txt .card-icon img { filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(140deg) brightness(104%) contrast(106%); width: 17px; height: 17px; margin-right: 5px; } 
+.sub-card-txt .card-icon img { filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(140deg) brightness(104%) contrast(106%); width: 22px; height: 22px; margin-right: 5px; } 
 .sub-card-txt .card-icon span { font-size: 11px; } 
 .reservation-btn { background-color: #555; border-radius: 0; } 
 .review { margin: 0 30px; border-top: 1px solid rgb(51, 51, 51, 0.1); } 
@@ -45,7 +45,7 @@
  .sub-card-txt .event-date { font-size: 1.7rem; font-weight: 300; margin: 0 2px 25px 5px; } 
  .sub-card-txt .event-money { font-size: 1.7rem; font-weight: 300; margin: 0 2px 5px 5px; }
  .sub-card-txt .card-icon { display: flex; gap: 30px; margin: 0 0 0 5px; } 
- .sub-card-txt .card-icon img { filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(140deg) brightness(104%) contrast(106%); width: 25px; height: 25px; margin-right: 5px; } 
+ .sub-card-txt .card-icon img { filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(140deg) brightness(104%) contrast(106%); width: 22px; height: 22px; margin-right: 5px; } 
  .sub-card-txt .card-icon span { font-size: 11px; } 
  .reservation-btn { background-color: #555; border-radius: 0; } 
  .review { margin: 0 30px; border-top: 1px solid rgb(51, 51, 51, 0.1); } 
