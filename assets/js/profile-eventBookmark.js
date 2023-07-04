@@ -50,20 +50,21 @@ window.onload = async function ReservationDetail() {
         eventStart.setHours(0, 0, 0, 0);
         eventEnd.setHours(0, 0, 0, 0);
         const oneDay = 24 * 60 * 60 * 1000;
-        const diffDaysStart = Math.round(Math.abs((currentDate - eventStart) / oneDay));
-        const diffDaysEnd = Math.round(Math.abs((currentDate - eventEnd) / oneDay));
+
 
         const season = document.createElement('p')
         season.setAttribute('class', 'reservation')
-        if (currentDate >= eventStart && currentDate <= (eventEnd - 2 * oneDay)) {
-          season.innerText = '행사중';
-        } else if (diffDaysStart > 0) {
-          season.innerText = '행사예정';
-        } else if (diffDaysEnd <= 2 && diffDaysEnd > 0) {
-        } else if (diffDaysEnd <= 2 && diffDaysEnd > 0) {
-          season.innerText = '마감임박';
-        } else {
-          season.innerText = '행사종료';
+        if (currentDate >= (eventStart - oneDay) && currentDate <= (eventEnd - oneDay)) {
+          season.innerText = '티켓오픈';
+        } 
+        else if (currentDate >= eventStart && currentDate >= eventEnd) {
+          season.innerText = '티켓마감';
+        } 
+        else if (eventStart > currentDate) {
+          season.innerText = '오픈예정';
+        } 
+        else {
+          season.innerText = '오류';
         }
 
 
